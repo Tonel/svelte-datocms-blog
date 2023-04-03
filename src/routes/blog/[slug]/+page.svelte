@@ -34,6 +34,7 @@
 <script>
     import { StructuredText } from "@datocms/svelte"
     import {error} from "@sveltejs/kit"
+
     export let data
     const { article } = data
 

@@ -1,8 +1,9 @@
-import {useGraphqlQuery} from '$lib/utils/query'
+import { performGraphqlQuery } from '$lib/utils/query'
+
 export async function load({params}) {
     // retrieve the articles related to the slug
     // specified in the url
-    const responseData = await useGraphqlQuery({
+    const responseData = await performGraphqlQuery({
         query: `
             query BlogPostQuery($slug: String!) {
              article(filter: { slug: { eq: $slug } }) {

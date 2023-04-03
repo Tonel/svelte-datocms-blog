@@ -1,5 +1,5 @@
-import { PUBLIC_DATOCMS_READ_ONLY_API_TOKEN } from '$env/static/public';
-export async function useGraphqlQuery({query, variables = {}}) {
+import { PUBLIC_DATOCMS_READ_ONLY_API_TOKEN } from '$env/static/public'
+export async function performGraphqlQuery({query, variables = {}}) {
     // perform the GraphQL request to the
     // DatoCMS Content Delivery API
     const response = await fetch('https://graphql.datocms.com', {
@@ -11,7 +11,7 @@ export async function useGraphqlQuery({query, variables = {}}) {
             query,
             variables,
         }),
-    });
+    })
 
     return await response.json()
-};
+}
