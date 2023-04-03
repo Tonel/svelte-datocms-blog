@@ -2,7 +2,7 @@ import { performGraphqlQuery } from '$lib/utils/query'
 
 export async function load({params}) {
     // retrieve the articles related to the slug
-    // specified in the url
+    // specified in the URL
     const responseData = await performGraphqlQuery({
         query: `
             query BlogPostQuery($slug: String!) {
