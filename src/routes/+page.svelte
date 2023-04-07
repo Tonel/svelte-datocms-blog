@@ -1,3 +1,9 @@
+<script>
+    export let data
+
+    const articles = data?.allArticles || []
+</script>
+
 <div>
     <div class="title">
         <h1>
@@ -65,9 +71,3 @@
         font-size: 14px;
     }
 </style>
-
-<script>
-    export let data
-
-    const articles = data?.allArticles || []
-</script>

@@ -1,3 +1,15 @@
+<script>
+    import { StructuredText } from "@datocms/svelte"
+    import {error} from "@sveltejs/kit"
+
+    export let data
+    const { article } = data
+
+    if (!article) {
+        throw error(404, { message: "Article Not found" })
+    }
+</script>
+
 <div class="article">
     <h1 class="article-title">
         {article.title}
@@ -30,16 +42,3 @@
         line-height: 30px;
     }
 </style>
-
-<script>
-    import { StructuredText } from "@datocms/svelte"
-    import {error} from "@sveltejs/kit"
-
-    export let data
-    const { article } = data
-
-    if (!article) {
-        throw error(404, { message: "Article Not found" })
-    }
-
-</script>
